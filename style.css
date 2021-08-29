@@ -1,0 +1,139 @@
+body {
+  margin-bottom: 30px;
+  background: linear-gradient(222deg, #02c9b7, #835ec2);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+h1 {
+  font-size: 35px;
+  color: #fff;
+  text-shadow: 2px 3px 0px #5c5c7b;
+  text-transform: uppercase;
+}
+.main h2 {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 3px 0px #5c5c7b;
+}
+.text-center {
+  text-align: center!important;
+}
+.page-header {
+  display: flex;
+  vertical-align: middle;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#back-btn {
+  color: #fff;
+  text-shadow: 1px 1px 1px #5c5c7b;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: none;
+}
+
+.main p {
+  text-align: center;
+  line-height: 25px;
+  color: #fff;
+  text-shadow: 2px 3px 0px #5c5c7b;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-image {
+  width: 100%;
+  margin: 30px auto;
+  box-shadow: 0 5px 10px rgb(4, 40, 65);
+  border-radius: 10px;
+}
+
+#buttons {
+  text-align: center;
+}
+
+.button {
+  box-shadow: 2px 5px 3px #00000038;
+  /* background: linear-gradient(to bottom, #7892c2 5%, #0d3463 100%); */
+  background-color: #243380;
+  border-radius: 5px;
+  /* border: 1px solid #172757; */
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Tahoma;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 12px 44px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+}
+.button:hover {
+  background: linear-gradient(to bottom, #0d3463 5%, #7892c2 100%);
+  background-color: #0d3463;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+.purple {
+  background: #835ec2 !important;
+}
+
+.green {
+  background: #02c9b7 !important;
+}
+
+.person-block {
+  background: #fff;
+  padding: 0.25rem 1rem;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 3px 1px #00000045;
+}
+.person-header a {
+  font-size: 25px;
+  color: #424242;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+.person-header {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #cccccc45;
+}
+.person-header span {
+  color: #737373;
+  /* font-style: italic; */
+}
+.person-about {
+  display: flex;
+}
+.person-about div {
+  width: 50%;
+  padding: 0.75rem 0;
+}
+
+.person-about div p {
+  margin: 0.5rem 0;
+}
+
+.pagination {
+  text-align: center;
+}
+
+.pagination div {
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  margin: 0.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}

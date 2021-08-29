@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>STAR WARS Characters</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1 id="page-title">All characters of star wars</h1>
+        <a href="characters.html" id="back-btn">All characters >> </a>
+      </div>
+
+      <div id="content"></div>
+      <div id="pagination" class="pagination">
+        <div id="prev">Prev</div>
+        <div id="next">Next</div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", init, false);
+      const splitLink = window.location.href.split("?");
+      const urlSearchParams = new URLSearchParams(splitLink[1]);
+      const params = Object.fromEntries(urlSearchParams.entries());
+
+      function init() {
+        let url = "https://swapi.dev/api/people/";
+        if (params.page) {
+          url += "?page=" + params.page;
+        } else if (params.id) {
+          url += params.id + "/";
+        }
+        fetch(url, {
+          method: "GET",
+          redirect: "follow",
+        })
+          .then((response) => response.text())
+          .then((result) => {
+            if (params.id) {
+              getCharacterID(result);
+            } else {
+              getCharacters(result);
+            }
+          })
+          .catch((error) => console.log("error", error));
+      }
+
+      document
+        .getElementById("next")
+        .addEventListener("click", handleNext, false);
+      document
+        .getElementById("prev")
+        .addEventListener("click", handlePrev, false);
+    </script>
+  </body>
+</html>
